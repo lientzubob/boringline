@@ -27,7 +27,7 @@ public class HomeController {
 	@RequestMapping("insert")
 	public String insert(){
 		System.out.println("==================================");
-		MessageBean messageBean = new MessageBean(1,"lalala","bob");
+		MessageBean messageBean = new MessageBean("我愛BOB BOB好帥","bob");
 		MessageBean insert = homeService.insert(messageBean);
 		System.out.println(insert);
 		System.out.println("==================================");
@@ -36,7 +36,7 @@ public class HomeController {
 	
 	@RequestMapping("update/{id}")
 	public String update(@PathVariable("id") Integer id){
-		MessageBean messageBean = new MessageBean(id,"jajaja","tim");
+		MessageBean messageBean = new MessageBean("jajaja","tim");
 		MessageBean update = homeService.update(messageBean);
 		System.out.println(update);
 		return "update";
@@ -44,7 +44,7 @@ public class HomeController {
 	
 	@RequestMapping("delete/{id}")
 	public String delete(@PathVariable("id") Integer id){
-		MessageBean messageBean = new MessageBean(id,null,null);
+		MessageBean messageBean = new MessageBean(null,null);
 		homeService.delete(messageBean);
 		return "delete";
 	}
@@ -66,6 +66,7 @@ public class HomeController {
 		List<MessageBean> selectAll = homeService.selectAll();
 		for(MessageBean data : selectAll){
 			System.out.println(data);
+			System.out.println(data.getMessage_article());
 		}
 		return "selectAll";
 	}
