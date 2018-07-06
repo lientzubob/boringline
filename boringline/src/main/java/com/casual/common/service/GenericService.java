@@ -3,13 +3,13 @@ package com.casual.common.service;
 import java.util.ArrayList;
 
 import org.assertj.core.util.Lists;
-import com.casual.common.dao.GenericDao;
+import com.casual.common.dao.GenericDAO;
 import com.casual.common.entity.GenericEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class GenericService<T extends GenericEntity> {
 	@Autowired
-	private GenericDao<T> dao;
+	private GenericDAO<T> dao;
 
 	public void insert(T genericEntity) throws Exception{
 		dao.save(genericEntity);
