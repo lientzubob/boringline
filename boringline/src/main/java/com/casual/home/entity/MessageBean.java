@@ -24,11 +24,8 @@ public class MessageBean extends GenericEntity implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 2087477144511361600L;
-<<<<<<< HEAD
 //	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-=======
->>>>>>> branch 'master' of https://github.com/lientzubob/boringline
 	private String message_article;
 	private String message_account;
 
@@ -37,26 +34,13 @@ public class MessageBean extends GenericEntity implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-<<<<<<< HEAD
 	public MessageBean( String message_article, String message_account) {
-=======
-	@Override
-	public String toString() {
-		return "MessageBean [message_article=" + message_article + ", message_account=" + message_account + "]";
-	}
-
-	public MessageBean(String message_article, String message_account) {
->>>>>>> branch 'master' of https://github.com/lientzubob/boringline
 		super();
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/lientzubob/boringline
 		this.message_article = message_article;
 		this.message_account = message_account;
 	}
 
-<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "MessageBean [ message_article=" + message_article + ", message_account="
@@ -93,9 +77,6 @@ public class MessageBean extends GenericEntity implements Serializable {
 		result = prime * result + ((message_article == null) ? 0 : message_article.hashCode());
 		return result;
 	}
-=======
-	
->>>>>>> branch 'master' of https://github.com/lientzubob/boringline
 
 	
 	
