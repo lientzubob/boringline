@@ -19,7 +19,7 @@ public class HomeServiceImpl implements HomeService{
 		return save ;
 	}
 
-	public MessageBean selectOne(Integer message_id) {
+	public MessageBean selectOne(Long message_id) {
 		MessageBean one = homeDAO.getOne(message_id);
 		return one ;
 	}

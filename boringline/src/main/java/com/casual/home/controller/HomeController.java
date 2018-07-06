@@ -56,7 +56,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping("selectOne/{id}")
-	public String selectOne(@PathVariable("id") Integer id){
+	public String selectOne(@PathVariable("id") Long id){
 		MessageBean selectOne = homeService.selectOne(id);
 		System.out.println(selectOne);
 		return "selectOne";

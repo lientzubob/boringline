@@ -7,9 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.casual.common.entity.GenericEntity;
+
 @Entity
 @Table(name="message")
-public class MessageBean {
+public class MessageBean extends GenericEntity{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer message_id;
