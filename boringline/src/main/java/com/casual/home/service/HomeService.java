@@ -13,7 +13,7 @@ public interface HomeService {
 
 	public MessageBean update(MessageBean messageBean);
 
-	public void delete(MessageBean messageBean);
+	public void delete(Long id);
 	
 	public void deleteAll();
 	

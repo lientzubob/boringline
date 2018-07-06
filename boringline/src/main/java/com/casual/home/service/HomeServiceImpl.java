@@ -34,8 +34,8 @@ public class HomeServiceImpl implements HomeService{
 		return save;
 	}
 
-	public void delete(MessageBean messageBean) {
-		homeDAO.delete(messageBean);
+	public void delete(Long id) {
+		homeDAO.delete(id);
 	}
 
 	@Override
