@@ -27,7 +27,11 @@ public class HomeController {
 	@RequestMapping("insert")
 	public String insert(){
 		System.out.println("==================================");
+<<<<<<< HEAD
 		MessageBean messageBean = new MessageBean("我愛BOB BOB好帥","bob");
+=======
+		MessageBean messageBean = new MessageBean("lalala","bob");
+>>>>>>> branch 'master' of https://github.com/lientzubob/boringline
 		MessageBean insert = homeService.insert(messageBean);
 		System.out.println(insert);
 		System.out.println("==================================");
@@ -43,9 +47,15 @@ public class HomeController {
 	}
 	
 	@RequestMapping("delete/{id}")
+<<<<<<< HEAD
 	public String delete(@PathVariable("id") Integer id){
 		MessageBean messageBean = new MessageBean(null,null);
 		homeService.delete(messageBean);
+=======
+	public String delete(@PathVariable("id") Long id){
+		MessageBean messageBean = new MessageBean(null,null);
+		homeService.delete(id);
+>>>>>>> branch 'master' of https://github.com/lientzubob/boringline
 		return "delete";
 	}
 	
