@@ -6,6 +6,15 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa: 
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
-    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database-platform: org.hibernate.dialect.MySQL5Dialect    
+    properties:
+      hibernate: 
+        hbm2ddl:
+          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+  mvc:
+    view: 
+      prefix: /WEB-INF/pages
+      suffix: .jsp
+    
